@@ -1,0 +1,45 @@
+{
+  "name": "flux-challenge-agentme",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prodbuild": "NODE_ENV=production browserify -vd src/index.js -o dist/bundle.js",
+    "devbuild": "NODE_ENV=development browserify -vd src/index.js -o dist/bundle.js",
+    "start": "NODE_ENV=development watchify -vd -p browserify-hmr src/index.js -o dist/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "envify"
+    ]
+  },
+  "author": "Chris Cowan <agentme49@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^5.8.29",
+    "babel-plugin-react-transform": "^1.1.1",
+    "babelify": "^6.4.0",
+    "browserify": "^11.2.0",
+    "browserify-hmr": "^0.3.1",
+    "classnames": "^2.2.0",
+    "envify": "^3.4.0",
+    "immutable": "^3.7.5",
+    "kefir": "^3.1.0",
+    "lodash": "^3.10.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.1.1",
+    "redux": "^3.0.4",
+    "redux-devtools": "^3.0.0-beta-3",
+    "redux-devtools-dock-monitor": "^1.0.0-beta-3",
+    "redux-devtools-log-monitor": "^1.0.0-beta-3",
+    "redux-thunk": "^1.0.0",
+    "watchify": "^3.4.0"
+  }
+}
